@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 02 - Formulari</title>
+    <script>
+        function validateForm() {
+            const textArea = document.getElementById("text");
+            const wordInput = document.getElementById("word");
+            if (textArea.value.trim() === "" || wordInput.value.trim() === "") {
+                alert("Si us plau, ompliu tots els camps.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Exercici 02 - Introducció de Text</h1>
+    <form action="exercici02.php" method="post" onsubmit="return validateForm()">
+        <label for="text">Introduïu el text:</label><br>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea><br><br>
+        
+        <label for="word">Paraula a buscar:</label><br>
+        <input type="text" id="word" name="word"><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

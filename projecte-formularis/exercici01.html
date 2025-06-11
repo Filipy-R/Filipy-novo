@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari de Dades Personals</title>
+</head>
+<body>
+    <h1>Formulari de Dades Personals</h1>
+    <form action="exercici01.php" method="post">
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <label for="cognoms">Cognoms:</label>
+        <input type="text" id="cognoms" name="cognoms" required><br><br>
+
+        <label for="genere">Gènere:</label>
+        <input type="radio" id="masculi" name="genere" value="masculí" required>
+        <label for="masculi">Masculí</label>
+        <input type="radio" id="femení" name="genere" value="femení" required>
+        <label for="femení">Femení</label><br><br>
+
+        <label for="correu">Correu electrònic:</label>
+        <input type="email" id="correu" name="correu" required><br><br>
+
+        <label for="edat">Edat:</label>
+        <input type="number" id="edat" name="edat" min="0" required><br><br>
+
+        <label for="ciutat">Ciutat:</label>
+        <input type="text" id="ciutat" name="ciutat" required><br><br>
+
+        <label>Aficions:</label><br>
+        <input type="checkbox" id="lectura" name="aficions[]" value="lectura">
+        <label for="lectura">Lectura</label><br>
+        <input type="checkbox" id="esports" name="aficions[]" value="esports">
+        <label for="esports">Esports</label><br>
+        <input type="checkbox" id="viatges" name="aficions[]" value="viatges">
+        <label for="viatges">Viatges</label><br><br>
+
+        <label for="motivacions">Motivacions personals:</label><br>
+        <textarea id="motivacions" name="motivacions" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
